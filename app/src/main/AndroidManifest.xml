@@ -12,6 +12,24 @@
         android:theme="@style/Theme.ProfileTopic"
         tools:targetApi="31">
         <activity
+            android:name=".UpdateScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ShowScreen"
+            android:exported="false" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".SignScreen"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
