@@ -80,6 +80,19 @@ EditText updateemail;
                     }
                 })  ;
         getProfile();
+        FirebaseMessaging.getInstance().subscribeToTopic("alaa")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Log.e("a","Done");
+                    }
+                })     .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("a","Failed");
+
+                    }
+                })  ;
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

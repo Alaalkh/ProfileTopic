@@ -55,21 +55,22 @@ public class MainActivity extends AppCompatActivity {
            @Override
            public void onClick(View view) {
                loginUser();;
-               FirebaseMessaging.getInstance().subscribeToTopic("alaa")
-                       .addOnCompleteListener(new OnCompleteListener<Void>() {
-                           @Override
-                           public void onComplete(@NonNull Task<Void> task) {
-                               Log.e("a","Done");
-                           }
-                       })     .addOnFailureListener(new OnFailureListener() {
-                           @Override
-                           public void onFailure(@NonNull Exception e) {
-                               Log.e("a","Failed");
 
-                           }
-                       })  ;
            }
        });
+        FirebaseMessaging.getInstance().subscribeToTopic("alaa")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Log.e("a","Done");
+                    }
+                })     .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("a","Failed");
+
+                    }
+                })  ;
         gotosign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
